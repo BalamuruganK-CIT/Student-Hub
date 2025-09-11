@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "event-1",
+      "description": "Hackathon event poster",
+      "imageUrl": "https://picsum.photos/seed/101/600/400",
+      "imageHint": "code computer"
+    },
+    {
+      "id": "event-2",
+      "description": "Tech talk event poster",
+      "imageUrl": "https://picsum.photos/seed/102/600/400",
+      "imageHint": "presentation conference"
+    },
+    {
+      "id": "event-3",
+      "description": "Annual sports day poster",
+      "imageUrl": "https://picsum.photos/seed/103/600/400",
+      "imageHint": "sports running"
+    },
+    {
+      "id": "event-4",
+      "description": "Cultural fest poster",
+      "imageUrl": "https://picsum.photos/seed/104/600/400",
+      "imageHint": "music festival"
+    }
+  ]
 }
