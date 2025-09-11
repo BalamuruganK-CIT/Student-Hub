@@ -3,11 +3,14 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Bot, LayoutGrid } from 'lucide-react';
+import { Bot, LayoutGrid, CalendarDays, BookCheck, Calendar } from 'lucide-react';
 
 const links = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutGrid },
-  { href: '/dashboard/chat', label: 'Academic Assistant', icon: Bot },
+  { href: '/dashboard/schedule', label: 'Schedule', icon: CalendarDays },
+  { href: '/dashboard/assignments', label: 'Assignments', icon: BookCheck },
+  { href: '/dashboard/events', label: 'Events', icon: Calendar },
+  { href: 'http://localhost:9002/dashboard/chat', label: 'Academic Assistant', icon: Bot },
 ];
 
 export function MainNav({ className, ...props }: React.HTMLAttributes<HTMLElement>) {
