@@ -16,6 +16,8 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { assignmentsData, Assignment } from '@/lib/mock-data';
 import { cn } from '@/lib/utils';
+import { Button } from '../ui/button';
+import { Upload } from 'lucide-react';
 
 export function AssignmentsTable() {
   const getBadgeVariant = (status: Assignment['status']) => {
@@ -43,7 +45,8 @@ export function AssignmentsTable() {
               <TableHead>Course</TableHead>
               <TableHead>Assignment</TableHead>
               <TableHead>Due Date</TableHead>
-              <TableHead className="text-right">Status</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead className="text-right">Action</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -52,10 +55,16 @@ export function AssignmentsTable() {
                 <TableCell className="font-medium">{assignment.course}</TableCell>
                 <TableCell>{assignment.title}</TableCell>
                 <TableCell>{assignment.dueDate}</TableCell>
-                <TableCell className="text-right">
+                <TableCell>
                   <Badge variant={getBadgeVariant(assignment.status)} className={cn('text-xs', {'bg-green-500': assignment.status === 'Submitted'})}>
                     {assignment.status}
                   </Badge>
+                </TableCell>
+                <TableCell className="text-right">
+                  <Button variant="outline" size="sm">
+                    <Upload className="mr-2 h-4 w-4" />
+                    Upload
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
