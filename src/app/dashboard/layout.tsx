@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/sheet';
 import { MainNav } from '@/components/dashboard/main-nav';
 import { UserNav } from '@/components/dashboard/user-nav';
+import { ThemeToggle } from '@/components/dashboard/theme-toggle';
 
 export default function DashboardLayout({
   children,
@@ -111,6 +112,7 @@ export default function DashboardLayout({
             <Bell className="h-4 w-4" />
             <span className="sr-only">Toggle notifications</span>
           </Button>
+          <ThemeToggle />
           <UserNav />
         </header>
         <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6 bg-background">
